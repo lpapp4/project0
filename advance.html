@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            width: 300px; 
+            margin-bottom: 20px;
+        }
+        .color{
+            color: darkred;
+            margin-left: 40px;
+        }
+
+        .top-left-advance {
+            position: fixed;
+            top: 20px;
+            left: 100px;
+        }
+
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 20px;
+            font-size: 18px;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="search"] {
+            width: 400px;
+            height: 20px;
+            font-size: 18px;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="search"] {
+            height: 36px;
+            font-size: 16px;
+            padding: 0 20px;
+            margin-bottom: 100px;
+        }
+
+        .top-left {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+
+        .top-left a {
+            margin-left: 15px;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="top-left">
+    <h1>Google</h1>
+    <h2 class="color" class="top-left-advance">Advance Search</h2></div>
+    <div class="search-box">
+        
+        <form action="https://google.com/search">
+             All these words:<input type="text" name="as_q" >
+            <br><br>Exact word/phrase:<input type="text" name="as_epq" >
+            <br><br>Any of these words:<input type="text" name="as_oq" >
+            <br><br>None of these words:<input type="text" name="as_eq" >
+           <br><br><input type="submit" value="advanced search">
+</form>
+        </form>
+    </div>
+
+</body>
+</html>

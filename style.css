@@ -1,0 +1,12 @@
+container {
+  position: relative; /* Required for absolute positioning within */
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.link {
+  position: absolute;
+  bottom: 100;
+  right: 50;
+}
