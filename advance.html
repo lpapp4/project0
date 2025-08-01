@@ -10,48 +10,17 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Align to the top for better label visibility */
             align-items: center;
+            padding-top: 50px; /* Add some padding from the top */
         }
 
         .logo {
-            width: 300px; 
+            width: 300px;
             margin-bottom: 20px;
         }
-        .color{
+        .color {
             color: darkred;
-            margin-left: 40px;
-        }
-
-        .top-left-advance {
-            position: fixed;
-            top: 20px;
-            left: 100px;
-        }
-
-        .search-box {
-            display: flex;
-            flex-direction: column;
-            width: 400px;
-            height: 20px;
-            font-size: 18px;
-            padding: 5px 10px;
-            margin-bottom: 10px;
-        }
-
-        input[type="search"] {
-            width: 400px;
-            height: 20px;
-            font-size: 18px;
-            padding: 5px 10px;
-            margin-bottom: 10px;
-        }
-
-        input[type="search"] {
-            height: 36px;
-            font-size: 16px;
-            padding: 0 20px;
-            margin-bottom: 100px;
         }
 
         .top-left {
@@ -64,22 +33,74 @@
             margin-left: 15px;
             text-decoration: none;
         }
-        
+
+        .search-form-container {
+            width: 600px; /* Adjust container width as needed */
+            margin-top: 100px; /* Space from the top Google heading */
+        }
+
+        .search-form-container form {
+            display: grid;
+            grid-template-columns: auto 1fr; /* Two columns: one for label, one for input */
+            gap: 15px; /* Space between rows and columns */
+            align-items: center; /* Vertically align items in the grid */
+        }
+
+        .search-form-container label {
+            text-align: right; /* Align labels to the right */
+            padding-right: 10px; /* Space between label and input */
+            font-size: 16px;
+            white-space: nowrap; /* Prevent labels from wrapping */
+        }
+
+        .search-form-container input[type="text"] {
+            width: 100%; /* Make input boxes take full width of their grid column */
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box; /* Include padding in the element's total width and height */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            grid-column: 2; /* Place the submit button in the second column */
+            justify-self: end; /* Align the submit button to the end of its column */
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px; /* Space above the button */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <div class="top-left">
-    <h1>Google</h1>
-    <h2 class="color" class="top-left-advance">Advance Search</h2></div>
-    <div class="search-box">
-        
+        <h1>Google</h1>
+        <h2 class="color">Advanced Search</h2>
+    </div>
+
+    <div class="search-form-container">
         <form action="https://google.com/search">
-             All these words:<input type="text" name="as_q" >
-            <br><br>Exact word/phrase:<input type="text" name="as_epq" >
-            <br><br>Any of these words:<input type="text" name="as_oq" >
-            <br><br>None of these words:<input type="text" name="as_eq" >
-           <br><br><input type="submit" value="advanced search">
-</form>
+            <label for="allWords">All these words:</label>
+            <input type="text" id="allWords" name="as_q">
+
+            <label for="exactPhrase">Exact word/phrase:</label>
+            <input type="text" id="exactPhrase" name="as_epq">
+
+            <label for="anyWords">Any of these words:</label>
+            <input type="text" id="anyWords" name="as_oq">
+
+            <label for="noneWords">None of these words:</label>
+            <input type="text" id="noneWords" name="as_eq">
+
+            <input type="submit" value="Advanced Search">
         </form>
     </div>
 
